@@ -55,18 +55,36 @@ package com.example.actbasickotlin_110
 //    println(readOnlyJuiceMenu.count())
 //}
 
-fun main() {
-    // If expression
-    val check = true
-    val d = if (check) 1 else 2
-    println(d)
+//fun main() {
+//    // If expression
+//    val check = true
+//    val d = if (check) 1 else 2
+//    println(d)
+//
+//    // When expression
+//    val obj = "Hello"
+//    val result = when (obj) {
+//        "1" -> "One"
+//        "Hello" -> "Greeting"
+//        else -> "Unknown"
+//    }
+//    println(result)
+//}
 
-    // When expression
-    val obj = "Hello"
-    val result = when (obj) {
-        "1" -> "One"
-        "Hello" -> "Greeting"
-        else -> "Unknown"
-    }
-    println(result)
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+
+fun printMessageWithPrefix(message: String, prefix: String = "Info") {
+    println("[$prefix] $message")
+}
+
+fun main() {
+    println(sum(1, 2))
+    printMessageWithPrefix("Hello", "Log")
+    printMessageWithPrefix("Hello")
+
+    // Lambda expression
+    val upper = { string: String -> string.uppercase() }
+    println(upper("hello"))
 }
