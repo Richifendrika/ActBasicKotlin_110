@@ -106,19 +106,34 @@ package com.example.actbasickotlin_110
 //    println(user == secondUser)
 //}
 
-fun describeString(maybeString: String?): String {
-    return if (maybeString != null && maybeString.length > 0) {
-        "String of length ${maybeString.length}"
-    } else {
-        "Empty or null string"
-    }
-}
+//fun describeString(maybeString: String?): String {
+//    return if (maybeString != null && maybeString.length > 0) {
+//        "String of length ${maybeString.length}"
+//    } else {
+//        "Empty or null string"
+//    }
+//}
+//
+//fun main() {
+//    var nullable: String? = "You can keep a null here"
+//    nullable = null
+//
+//    val nullString: String? = null
+//    println(nullString?.length) // Safe call
+//    println(nullString?.length ?: 0) // Elvis operator
+//}
 
 fun main() {
-    var nullable: String? = "You can keep a null here"
-    nullable = null
+    // Range & For Loop
+    for (number in 1..5) {
+        print(number)
+    }
+    println()
 
-    val nullString: String? = null
-    println(nullString?.length) // Safe call
-    println(nullString?.length ?: 0) // Elvis operator
+    // While Loop
+    var count = 3
+    while (count > 0) {
+        println("Count down: $count")
+        count--
+    }
 }
